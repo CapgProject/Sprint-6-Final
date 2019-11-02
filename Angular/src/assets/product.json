@@ -1,0 +1,17 @@
+[
+    {
+        "prodId":1001,
+        "prodName": "Rice",
+        "prodCost": 101
+    },
+    {
+        "prodId":1002,
+        "prodName": "Mobile",
+        "prodCost": 100101
+    },
+    {
+        "prodId":1003,
+        "prodName": "Paper",
+        "prodCost": 100   
+    }
+]

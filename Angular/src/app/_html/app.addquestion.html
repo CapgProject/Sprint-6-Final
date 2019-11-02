@@ -1,0 +1,282 @@
+<style>
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+    
+    .switch input { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #2196F3;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    
+    input:checked + .slider {
+        background-color: #2196F3;
+    }
+    
+    input:focus + .slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+    
+    input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+    
+    /* Rounded sliders */
+    .slider.round {
+        border-radius: 34px;
+    }
+    
+    .slider.round:before {
+        border-radius: 50%;
+    }
+</style>
+<header id="header" style="background-color: rgb(22, 7, 7); opacity: 0.6">
+        <div class="container">
+    
+          <div id="logo" class="pull-left" style="width: 100%"></div>
+    
+          <nav id="nav-menu-container">
+            <ul class="nav-menu" style="width: 100%;">
+              <li class="menu-active"><a href="#hero">Home</a></li>
+              <li class="menu-has-children"><a href="addquestion">Test</a>
+                <ul>
+                  <li><a href="addtest">Add Test</a></li>
+                  <li><a href="updatetest">Update Test</a></li>
+                  <li><a href="removetest">Remove Test</a></li>
+                  <li><a href="showalltests">Show All Test</a></li>
+                  <li><a href="assign">Assign Test</a></li>
+                </ul>
+              </li>
+              <li class="menu-has-children"><a href="addquestion">Question</a>
+                <ul>
+                  <li><a href="addquestion">Add Question</a></li>
+                  <li><a href="updatequestion">Update Question</a></li>
+                  <li><a href="deletequestion">Remove Question</a></li>
+                  <li><a href="showquestion">List Question</a></li>
+                </ul>
+              </li>
+              <li><a href="listusers">List Users</a></li>
+              <li><a href="updateadmin">Update Profile</a></li>
+              <li><a class="button" href="logout"><i class="fa fa-sign-in"></i>&nbsp;Logout</a></li>          
+            </ul>      
+          </nav>
+        </div>
+</header>
+
+
+    <main id="main">
+    <br>
+    <section id="portfolio">
+        <div class="container wow fadeInUp">
+            <div class="section-header">
+                <h3 class="section-title">Add Question </h3>
+                <p class="section-description">Enter the Question details to be Added here</p>
+            </div>
+            <div class = "row">
+                    <div class="text-right col-md-5 col-lg-5">
+                        <p>Enter Multiple Questions through Excel File</p>  
+                    </div>    
+                    <div class="text-center col-md-1 col-lg-1">
+                        <label class="switch">
+                            <input type="checkbox" [(ngModel)]="buttonVal" (click)="changeButtonValue(buttonVal)">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>    
+                    <div class="text-left col-md-5 col-lg-5">
+                        <p>Enter a Single Question through a form</p>    
+                    </div>    
+            </div>
+            <br><br>
+            <div *ngIf="buttonVal==false else questionformblock">
+                <form enctype="multipart/form-data">
+                    <div>
+                    <div class = "row">
+                        <div class="text-center col-md-6 col-lg-6">
+                            Enter the Test Id:
+                        </div>
+                        <div class="col-md-4 col-lg-4">
+                            <input type="number" name="testid" [(ngModel)]="testid" (focusout)="validateId()"/><br>
+                            <span style="color: red;" *ngIf= "iderror">{{iderror}}</span>
+                        </div>
+                    </div>
+                    </div>
+                    <br>
+                    <div class = "row">
+                        <div class="text-center col-md-6 col-lg-6">
+                            Input File:
+                        </div>
+                        <div class="col-md-4 col-lg-4">
+                            <input  type= "file" id = "exfile" (change)="getFileDetails($event)" accept=".xlsx"/><br>
+                            <span style = 'color: red;' *ngIf = "file_error">{{file_error}}</span>
+                        </div>
+                    </div>
+                    <br>    
+                    <div class = "row">
+                        <div class="text-center col-md-6 col-lg-6">
+                        </div>
+                        <div class="col-md-4 col-lg-4">
+                            <button type="submit" class = "btn btn-primary" (click)="uploadFiles()">Add Question</button>
+                        </div>
+                    </div>
+                    <br>
+                </form>   
+            </div>
+            <ng-template #questionformblock>
+                <div>
+                    <form>
+                        <div class="row">
+                            <div class="text-center col-md-6 col-lg-6">Enter Test Id:</div>
+                            <div class="col-md-4 col-lg-4">
+                                <input type="number" name="testId" [(ngModel)]="testId" (focusout)="validateTestId()" />
+                                <br>
+                                <span *ngIf = "error_id!=null" style="color:red">{{error_id}}</span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="text-center col-md-6 col-lg-6">Question Title:</div>
+                            <div class="col-md-4 col-lg-4">
+                                <input type="text" name="questiontitle" [(ngModel)]="question.questionTitle" (focusout)="validateTitle()" />
+                                <br>
+                                <span *ngIf = "error_title!=null" style="color:red">{{error_title}}</span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="text-center col-md-6 col-lg-6">Question Options :</div>
+                            <div class="col-md-4 col-lg-4">
+                                <input type="text" name="questionoptions" [(ngModel)]="question.questionOptions" (focusout)="validateOptions()" />
+                                <br>
+                                <span *ngIf = "error_options!=null" style="color:red">{{error_options}}</span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="text-center col-md-6 col-lg-6">Question Correct Answer :</div>
+                            <div class="col-md-4 col-lg-4">
+                                <input type="number" name="questionanswer" [(ngModel)]="question.questionAnswer" (focusout)="validateAnswer()" />
+                                <br>
+                                <span *ngIf = "error_answer!=null" style="color:red">{{error_answer}}</span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="text-center col-md-6 col-lg-6">Question Marks :</div>
+                            <div class="col-md-4 col-lg-4">
+                                <input type="number" name="questionmarks" [(ngModel)]="question.questionMarks" (focusout)="validateMarks()" />
+                                <br>
+                                <span *ngIf = "error_marks!=null" style="color:red">{{error_marks}}</span>
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="row">
+                            <div class="text-center col-md-6 col-lg-6"></div>
+                            <div class="col-md-4 col-lg-4">
+                                <button type="submit" class="btn btn-primary" (click)="addThroughForm()">Add Question</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </ng-template>
+        </div>
+    </section>
+
+    </main>
+
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer" style="position: fixed;bottom: 0px; width: 100%;">
+    <div class="footer-top">
+      <div class="container">
+
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+ 
+  <script type="text/javascript">
+    $(function () {
+        $("#id_error").hide();
+        $("#file_error").hide();
+        var error_id = false;
+        var error_file = false;
+        $("#testid").focusout(function () {
+            check_id();
+        });
+        
+        $("#file").focusout(function () {
+            check_file();
+        });
+        
+        function check_id() {
+            var length = $("#testid").val().length;
+            var pattern = new RegExp("^[0-9]+$");
+            if(length<1 || !pattern.test($("#testid").val())){
+                $("#id_error").html("Please enter a number!");
+                $("#id_error").show();
+                error_id = true;
+            }
+            else{
+                $("#id_error").hide();
+            }
+        }
+        
+        function check_file() {
+            var filename = $("#file").val();
+            var extension = filename.substr(filename.lastIndexOf(".")+1);
+            if(extension != "xlsx"){
+                $("#file_error").html("Invalid file format chosen! Please choose a .xlsx  file only!");
+                $("#file_error").show();
+                error_file = true;
+            }
+            else{
+                $("#file_error").hide();
+            }
+        }
+        
+        $("#form").submit(function(){
+            error_id = false;
+            error_file = false;
+            check_id();
+            check_file();
+            if(error_id == false && error_file == false){
+                return true;
+            }
+            else{
+                return false;
+            }
+        });
+    });
+    </script>
+    

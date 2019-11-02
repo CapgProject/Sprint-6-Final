@@ -1,0 +1,90 @@
+<header id="header" style="background-color: rgb(22, 7, 7); opacity: 0.6">
+  <div class="container">
+
+    <div id="logo" class="pull-left" style="width: 100%"></div>
+
+    <nav id="nav-menu-container">
+      <ul class="nav-menu" style="width: 100%;">
+        <li class="menu-active"><a href="admin">Home</a></li>
+        <li class="menu-has-children"><a href="assign">Test</a>
+          <ul>
+            <li><a href="addtest">Add Test</a></li>
+            <li><a href="updatetest">Update Test</a></li>
+            <li><a href="removetest">Remove Test</a></li>
+            <li><a href="showalltests">Show All Test</a></li>
+            <li><a href="assign">Assign Test</a></li>
+          </ul>
+        </li>
+        <li class="menu-has-children"><a href="assign">Question</a>
+          <ul>
+            <li><a href="addquestion">Add Question</a></li>
+            <li><a href="updatequestion">Update Question</a></li>
+            <li><a href="deletequestion">Remove Question</a></li>
+            <li><a href="showquestion">List Question</a></li>
+          </ul>
+        </li>
+        <li><a href="listusers">List Users</a></li>
+        <li><a href="updateadmin">Update Profile</a></li>
+        <li><a class="button" href="logout"><i class="fa fa-sign-in"></i>&nbsp;Logout</a></li>          
+      </ul>      
+    </nav>
+  </div>
+</header>
+
+
+  <main id="main">
+  <br>
+    <section id="portfolio">
+      <div class="container wow fadeInUp">
+      <div class="section-header">
+      <h3 class="section-title">Assign Test</h3>
+      <p class="section-description">You can use the below form to assign an existing test to a user</p>
+      </div>
+      <form id="assigntest" action="assigntestsubmit" method="post">
+        <div class = "row">
+          <div class="text-center col-md-6 col-lg-6">
+            Enter the Test Id:
+          </div>
+          <div class="col-md-4 col-lg-4">
+            <input type="number" id="test_id" name="testid" [(ngModel)] = "assign.testId" placeholder="Enter Test Id" class="form-control" (focusout)= "validateTestId()">
+             <span class="error" id="testid_error_message" style="color:red" *ngIf = "testIdError">{{testIdError}}</span>
+             <span style="color:red"> </span>
+          </div>
+        </div>
+        <div class = "row">
+          <div class="text-center col-md-6 col-lg-6">
+            Enter the User Id:
+          </div>
+          <div class="col-md-4 col-lg-4">
+            <input type="number" id="user_id" name="userid" [(ngModel)] = "assign.userId" placeholder="Enter User Id" class="form-control" (focusout) = "validateUserId()">
+            <span class="error" id="userid_error_message" style="color:red" *ngIf = "userIdError">{{userIdError}}</span>
+          </div>
+        </div>
+        <div class = "row">
+          <div class="text-center col-md-6 col-lg-6">
+          </div>
+          <div class="col-md-4 col-lg-4">
+            <button type="button" class = "btn btn-primary" (click) = "assignTest()">Assign Test</button>
+          </div>
+        </div>
+        <br>
+        </form>   
+    </div>
+    </section>
+
+  </main>
+
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer" style="position: fixed;bottom: 0px; width: 100%;">
+    <div class="footer-top">
+      <div class="container">
+
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+

@@ -1,0 +1,168 @@
+<header id="header" style="background-color: rgb(22, 7, 7); opacity: 0.6">
+	<div class="container">
+
+	  <div id="logo" class="pull-left" style="width: 100%"></div>
+
+	  <nav id="nav-menu-container">
+		<ul class="nav-menu" style="width: 100%;">
+		  <li class="menu-active"><a href="admin">Home</a></li>
+		  <li class="menu-has-children"><a href="addtest">Test</a>
+			<ul>
+			  <li><a href="addtest">Add Test</a></li>
+			  <li><a href="updatetest">Update Test</a></li>
+			  <li><a href="removetest">Remove Test</a></li>
+			  <li><a href="showalltests">Show All Test</a></li>
+			  <li><a href="assign">Assign Test</a></li>
+			</ul>
+		  </li>
+		  <li class="menu-has-children"><a href="addtest">Question</a>
+			<ul>
+			  <li><a href="addquestion">Add Question</a></li>
+			  <li><a href="updatequestion">Update Question</a></li>
+			  <li><a href="deletequestion">Remove Question</a></li>
+			  <li><a href="showquestion">List Question</a></li>
+			</ul>
+		  </li>
+		  <li><a href="listusers">List Users</a></li>
+		  <li><a href="updateadmin">Update Profile</a></li>
+		  <li><a class="button" href="logout"><i class="fa fa-sign-in"></i>&nbsp;Logout</a></li>          
+		</ul>      
+	  </nav>
+	</div>
+</header>
+
+
+	<main id="main"> <br>
+	<section id="portfolio">
+		<div class="container wow fadeInUp">
+			<div class="section-header">
+				<h3 class="section-title">Add Test</h3>
+				<p class="section-description">Enter the test details to be
+					added here</p>
+			</div>
+			<form id="testform" name="form" #f="ngForm" novalidate action="addtestsubmit" method="post"> 
+					
+				<div class="row">
+					
+					<div class="text-center col-md-6 col-lg-6">Enter the Test
+						Name:</div>
+					<div class="col-md-4 col-lg-4">
+						<input type="text" class="form-control" name="testName" [(ngModel)]="model.testName" 
+						[ngModelOptions]="{standalone: true}" path="testName" placeholder="Enter Test Name" 
+						id="name"   (focusout)="validateTestName()" />
+							<span *ngIf ="nameError!=null" class="error" style="color: red">{{nameError}}</span>
+
+						
+					</div>
+				
+				</div>
+				<br>
+				<div class="row">
+				
+					<div class="text-center col-md-6 col-lg-6">Enter the Test
+						Duration:</div>
+					<div class="col-md-4 col-lg-4">
+						<input type="text" class="form-control" name="testDuration" [(ngModel)]="model.testDuration" 
+							[ngModelOptions]="{standalone: true}" path="testDuration" placeholder="(HH:MM:SS)"
+							id="duration" (focusout)="validateTestDuration()"  />
+							
+							<span *ngIf ="durationError!=null" class="error" style="color: red">{{durationError}}</span>
+
+							
+						
+					</div>
+				
+				</div>
+				<br>
+				<div class="row">
+					<div class="text-center col-md-6 col-lg-6">Enter the Test
+						Start time:</div>
+					<div class="col-md-4 col-lg-4">
+						<input type="datetime-local" class="form-control" name="startTime"
+						[(ngModel)]="model.startTime"  
+						[ngModelOptions]="{standalone: true}" path="startTime" id="startTime"  (focusout)=" validateStartTime()"/>
+						
+						<span *ngIf ="startTimeError!=null" class="error" style="color: red">{{startTimeError}}</span>
+
+						
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="text-center col-md-6 col-lg-6">Enter the Test
+						End time:</div>
+					<div class="col-md-4 col-lg-4">
+						<input type="datetime-local" class="form-control" name="endTime"
+						[(ngModel)]="model.endTime" 
+						[ngModelOptions]="{standalone: true}" path="endTime" id="endTime"  (focusout)="validateEndTime()"/>
+						<span *ngIf ="endTimeError!=null" class="error" style="color: red">{{endTimeError}}</span>
+
+					</div>
+				</div>
+				<br>
+				<div class="row justify-content-center">
+					<div class="col-lg-4"  class="form-group">
+						<button class="btn btn-primary" type="submit" name="Add Test" (click)="addTest()">Add
+							Test</button>
+					</div>
+					<!--<div class="col-lg-4">
+						<button class="btn btn-primary" type="reset" name="Clear">Clear</button>
+					</div>-->
+				</div>
+
+			</form>
+		</div>
+	</section>
+	<section id="contact">
+			<div class="container wow fadeInUp">
+			  <div class="section-header">
+				<h3 class="section-title">Contact</h3>
+				<p class="section-description">You can get in touch with us in the following ways</p>
+			  </div>
+			</div>
+	  
+			<div class="container wow fadeInUp mt-5">
+			  <div class="row justify-content-center">
+	  
+				<div class="col-lg-3 col-md-4">
+	  
+				  <div class="info">
+					<div>
+					  <i class="fa fa-map-marker"></i>
+					  <p>CKP<br>Airoli, Navi Mumbai</p>
+					</div>
+	  
+					<div>
+					  <i class="fa fa-envelope"></i>
+					  <p>info@example.com</p>
+					</div>
+	  
+					<div>
+					  <i class="fa fa-phone"></i>
+					  <p>+91 5589554885</p>
+					</div>
+				  </div>
+	  
+				  <div class="social-links">
+					<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+					<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+					<a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+					<a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+					<a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+				  </div>
+	  
+				</div>
+			  </div>
+	  
+			</div>
+		  </section><!-- #contact -->
+	  
+	  
+		</main>
+	  
+	  
+		
+
+
+	
+

@@ -1,0 +1,147 @@
+
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+    tr:nth-child(even) {background-color: #64F5E8;}
+    th{
+      background-color: #0E56A9;
+      font: red;
+    }
+  </style>
+
+<header id="header" style="background-color: rgb(22, 7, 7); opacity: 0.6">
+  <div class="container">
+
+    <div id="logo" class="pull-left" style="width: 100%"></div>
+
+    <nav id="nav-menu-container">
+      <ul class="nav-menu" style="width: 100%;">
+        <li class="menu-active"><a href="admin">Home</a></li>
+        <li class="menu-has-children"><a href="showquestion">Test</a>
+          <ul>
+            <li><a href="addtest">Add Test</a></li>
+            <li><a href="updatetest">Update Test</a></li>
+            <li><a href="removetest">Remove Test</a></li>
+            <li><a href="showalltests">Show All Test</a></li>
+            <li><a href="assign">Assign Test</a></li>
+          </ul>
+        </li>
+        <li class="menu-has-children"><a href="showquestion">Question</a>
+          <ul>
+            <li><a href="addquestion">Add Question</a></li>
+            <li><a href="updatequestion">Update Question</a></li>
+            <li><a href="deletequestion">Remove Question</a></li>
+            <li><a href="showquestion">List Question</a></li>
+          </ul>
+        </li>
+        <li><a href="listusers">List Users</a></li>
+        <li><a href="updateadmin">Update Profile</a></li>
+        <li><a class="button" href="logout"><i class="fa fa-sign-in"></i>&nbsp;Logout</a></li>          
+      </ul>      
+    </nav>
+  </div>
+</header>
+
+
+  <main id="main">
+    <br>
+    <section id="portfolio">
+      <div class="container wow fadeInUp">
+        <div class="section-header">
+          <h3 class="section-title">List Questions</h3>
+          <p class="section-description">Enter the test details whose questions need to be seen</p>
+        </div>
+        <form action="listquestionsubmit" method="post" id="form">
+          <div class = "row">
+            <div class="text-center col-md-6 col-lg-6">
+              Enter the Test Id:
+            </div>
+            <div class="col-md-4 col-lg-4">
+              <input type="number" name="testId" placeholder="Enter Test Id" [(ngModel)]="testId">
+            </div>
+          </div>
+          <br>
+          <div class = "row">
+            <div class="text-center col-md-6 col-lg-6">
+            </div>
+            <div class="col-md-4 col-lg-4">
+              <button type="submit" class = "btn btn-primary" (click) = "showAllQuestions(testId)">Show Questions</button>
+            </div>
+          </div>
+          <br>
+        </form>   
+      </div>
+      <div class="container wow fadeInUp">
+        <div class="row">
+          <div class = "col-md-3 col-lg-3"></div>
+          <div class = "col-md-6 col-lg-6">
+            <ng2-smart-table [settings]="settings" [source] = "questions"></ng2-smart-table> 
+          </div>
+        </div>
+      </div>
+    </section>
+        
+
+    <section id="contact">
+      <div class="container wow fadeInUp">
+        <div class="section-header">
+          <h3 class="section-title">Contact</h3>
+          <p class="section-description">You can get in touch with us in the following ways</p>
+        </div>
+      </div>
+
+      <div class="container wow fadeInUp mt-5">
+        <div class="row justify-content-center">
+
+          <div class="col-lg-3 col-md-4">
+
+            <div class="info">
+              <div>
+                <i class="fa fa-map-marker"></i>
+                <p>CKP<br>Airoli, Navi Mumbai</p>
+              </div>
+
+              <div>
+                <i class="fa fa-envelope"></i>
+                <p>info@example.com</p>
+              </div>
+
+              <div>
+                <i class="fa fa-phone"></i>
+                <p>+91 5589554885</p>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- #contact -->
+
+  </main>
+
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+
+      </div>
+    </div>
+  </footer><!-- #footer -->

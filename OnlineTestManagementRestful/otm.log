@@ -1,0 +1,110 @@
+2019-11-02 14:49:45,077 INFO com.cg.otm.OnlineTestManagementRestful.OnlineTestManagementRestfulApplication [main] Starting OnlineTestManagementRestfulApplication on DESKTOP-R2ES8GU with PID 6828 (C:\Users\Admin\git\Sprint-6\OnlineTestManagementRestful\target\classes started by Admin in C:\Users\Admin\git\Sprint-6\OnlineTestManagementRestful)
+2019-11-02 14:49:45,082 DEBUG com.cg.otm.OnlineTestManagementRestful.OnlineTestManagementRestfulApplication [main] Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.10.RELEASE
+2019-11-02 14:49:45,083 INFO com.cg.otm.OnlineTestManagementRestful.OnlineTestManagementRestfulApplication [main] No active profile set, falling back to default profiles: default
+2019-11-02 14:49:46,267 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2019-11-02 14:49:46,268 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.26]
+2019-11-02 14:49:46,466 INFO org.apache.jasper.servlet.TldScanner [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-11-02 14:49:46,471 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2019-11-02 14:49:46,618 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2019-11-02 14:49:47,111 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2019-11-02 14:49:47,151 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-11-02 14:49:47,195 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.12.Final}
+2019-11-02 14:49:47,197 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2019-11-02 14:49:47,300 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-02 14:49:47,413 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-11-02 14:49:48,119 INFO org.hibernate.tool.schema.internal.SchemaCreatorImpl [main] HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@150fc7a7'
+2019-11-02 14:49:48,496 DEBUG com.cg.otm.OnlineTestManagementRestful.config.JwtRequestFilter [main] Filter 'jwtRequestFilter' configured for use
+2019-11-02 14:49:48,573 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [main] HHH000397: Using ASTQueryTranslatorFactory
+2019-11-02 14:49:49,251 INFO com.cg.otm.OnlineTestManagementRestful.OnlineTestManagementRestfulApplication [main] Started OnlineTestManagementRestfulApplication in 4.432 seconds (JVM running for 4.832)
+2019-11-02 15:53:24,934 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-9088-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-02 15:53:24,988 WARN com.cg.otm.OnlineTestManagementRestful.config.JwtRequestFilter [http-nio-9088-exec-1] JWT Token does not begin with Bearer String
+2019-11-02 15:53:25,052 WARN com.cg.otm.OnlineTestManagementRestful.config.JwtRequestFilter [http-nio-9088-exec-2] JWT Token does not begin with Bearer String
+2019-11-02 15:53:39,667 WARN com.cg.otm.OnlineTestManagementRestful.config.JwtRequestFilter [http-nio-9088-exec-4] JWT Token does not begin with Bearer String
+2019-11-02 15:53:39,674 WARN com.cg.otm.OnlineTestManagementRestful.config.JwtRequestFilter [http-nio-9088-exec-3] JWT Token does not begin with Bearer String
+2019-11-02 15:53:40,030 WARN com.cg.otm.OnlineTestManagementRestful.config.JwtRequestFilter [http-nio-9088-exec-5] JWT Token does not begin with Bearer String
+2019-11-02 15:53:49,361 WARN com.cg.otm.OnlineTestManagementRestful.config.JwtRequestFilter [http-nio-9088-exec-6] JWT Token does not begin with Bearer String
+2019-11-02 15:53:52,187 WARN com.cg.otm.OnlineTestManagementRestful.config.JwtRequestFilter [http-nio-9088-exec-8] JWT Token does not begin with Bearer String
+2019-11-02 15:54:26,202 WARN com.cg.otm.OnlineTestManagementRestful.config.JwtRequestFilter [http-nio-9088-exec-9] JWT Token does not begin with Bearer String
+2019-11-02 15:54:26,864 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-10] Entered update user method
+2019-11-02 15:54:27,233 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-10] User successfully updated
+2019-11-02 15:54:27,233 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-10] User Updated By - 192.168.0.130 on date 192.168.0.130
+2019-11-02 15:54:46,410 WARN com.cg.otm.OnlineTestManagementRestful.config.JwtRequestFilter [http-nio-9088-exec-1] JWT Token does not begin with Bearer String
+2019-11-02 15:58:29,456 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(2)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2019-11-02 15:58:29,463 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(2)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2019-11-02 15:58:50,514 INFO com.cg.otm.OnlineTestManagementRestful.OnlineTestManagementRestfulApplication [main] Starting OnlineTestManagementRestfulApplication on DESKTOP-R2ES8GU with PID 6916 (C:\Users\Admin\git\Sprint-6\OnlineTestManagementRestful\target\classes started by Admin in C:\Users\Admin\git\Sprint-6\OnlineTestManagementRestful)
+2019-11-02 15:58:50,516 DEBUG com.cg.otm.OnlineTestManagementRestful.OnlineTestManagementRestfulApplication [main] Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.10.RELEASE
+2019-11-02 15:58:50,516 INFO com.cg.otm.OnlineTestManagementRestful.OnlineTestManagementRestfulApplication [main] No active profile set, falling back to default profiles: default
+2019-11-02 15:58:51,751 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2019-11-02 15:58:51,752 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.26]
+2019-11-02 15:58:51,953 INFO org.apache.jasper.servlet.TldScanner [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-11-02 15:58:51,959 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2019-11-02 15:58:52,093 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2019-11-02 15:58:52,523 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2019-11-02 15:58:52,561 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-11-02 15:58:52,605 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.12.Final}
+2019-11-02 15:58:52,606 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2019-11-02 15:58:52,703 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-02 15:58:52,820 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-11-02 15:58:53,850 DEBUG com.cg.otm.OnlineTestManagementRestful.config.JwtRequestFilter [main] Filter 'jwtRequestFilter' configured for use
+2019-11-02 15:58:53,925 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [main] HHH000397: Using ASTQueryTranslatorFactory
+2019-11-02 15:58:54,609 INFO com.cg.otm.OnlineTestManagementRestful.OnlineTestManagementRestfulApplication [main] Started OnlineTestManagementRestfulApplication in 4.368 seconds (JVM running for 4.828)
+2019-11-02 15:58:54,613 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(2)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2019-11-02 15:58:54,617 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(2)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2019-11-02 15:59:04,659 INFO com.cg.otm.OnlineTestManagementRestful.OnlineTestManagementRestfulApplication [main] Starting OnlineTestManagementRestfulApplication on DESKTOP-R2ES8GU with PID 5580 (C:\Users\Admin\git\Sprint-6\OnlineTestManagementRestful\target\classes started by Admin in C:\Users\Admin\git\Sprint-6\OnlineTestManagementRestful)
+2019-11-02 15:59:04,661 DEBUG com.cg.otm.OnlineTestManagementRestful.OnlineTestManagementRestfulApplication [main] Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.10.RELEASE
+2019-11-02 15:59:04,661 INFO com.cg.otm.OnlineTestManagementRestful.OnlineTestManagementRestfulApplication [main] No active profile set, falling back to default profiles: default
+2019-11-02 15:59:05,726 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2019-11-02 15:59:05,727 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.26]
+2019-11-02 15:59:05,924 INFO org.apache.jasper.servlet.TldScanner [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-11-02 15:59:05,929 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2019-11-02 15:59:06,061 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2019-11-02 15:59:06,453 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2019-11-02 15:59:06,489 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-11-02 15:59:06,532 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.12.Final}
+2019-11-02 15:59:06,533 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2019-11-02 15:59:06,640 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-02 15:59:06,751 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-11-02 15:59:07,472 INFO org.hibernate.tool.schema.internal.SchemaCreatorImpl [main] HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@51f68849'
+2019-11-02 15:59:07,854 DEBUG com.cg.otm.OnlineTestManagementRestful.config.JwtRequestFilter [main] Filter 'jwtRequestFilter' configured for use
+2019-11-02 15:59:07,935 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [main] HHH000397: Using ASTQueryTranslatorFactory
+2019-11-02 15:59:08,608 INFO com.cg.otm.OnlineTestManagementRestful.OnlineTestManagementRestfulApplication [main] Started OnlineTestManagementRestfulApplication in 4.211 seconds (JVM running for 4.626)
+2019-11-02 16:00:14,922 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-9088-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-02 16:00:14,942 WARN com.cg.otm.OnlineTestManagementRestful.config.JwtRequestFilter [http-nio-9088-exec-1] JWT Token does not begin with Bearer String
+2019-11-02 16:00:27,146 WARN com.cg.otm.OnlineTestManagementRestful.config.JwtRequestFilter [http-nio-9088-exec-2] JWT Token does not begin with Bearer String
+2019-11-02 16:01:55,918 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-5] Entered update user method
+2019-11-02 16:01:56,060 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-5] User successfully updated
+2019-11-02 16:01:56,061 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-5] User Updated By - 192.168.0.130 on date 192.168.0.130
+2019-11-02 16:06:42,384 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(2)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2019-11-02 16:06:42,387 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(2)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2019-11-02 16:06:59,172 INFO com.cg.otm.OnlineTestManagementRestful.OnlineTestManagementRestfulApplication [main] Starting OnlineTestManagementRestfulApplication on DESKTOP-R2ES8GU with PID 9896 (C:\Users\Admin\git\Sprint-6\OnlineTestManagementRestful\target\classes started by Admin in C:\Users\Admin\git\Sprint-6\OnlineTestManagementRestful)
+2019-11-02 16:06:59,174 DEBUG com.cg.otm.OnlineTestManagementRestful.OnlineTestManagementRestfulApplication [main] Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.10.RELEASE
+2019-11-02 16:06:59,174 INFO com.cg.otm.OnlineTestManagementRestful.OnlineTestManagementRestfulApplication [main] No active profile set, falling back to default profiles: default
+2019-11-02 16:07:00,356 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2019-11-02 16:07:00,357 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.26]
+2019-11-02 16:07:00,558 INFO org.apache.jasper.servlet.TldScanner [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-11-02 16:07:00,563 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2019-11-02 16:07:00,697 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2019-11-02 16:07:01,146 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2019-11-02 16:07:01,185 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-11-02 16:07:01,230 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.12.Final}
+2019-11-02 16:07:01,232 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2019-11-02 16:07:01,336 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-02 16:07:01,448 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-11-02 16:07:02,196 INFO org.hibernate.tool.schema.internal.SchemaCreatorImpl [main] HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2bf2d6eb'
+2019-11-02 16:07:02,574 DEBUG com.cg.otm.OnlineTestManagementRestful.config.JwtRequestFilter [main] Filter 'jwtRequestFilter' configured for use
+2019-11-02 16:07:02,651 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [main] HHH000397: Using ASTQueryTranslatorFactory
+2019-11-02 16:07:03,332 INFO com.cg.otm.OnlineTestManagementRestful.OnlineTestManagementRestfulApplication [main] Started OnlineTestManagementRestfulApplication in 4.424 seconds (JVM running for 4.88)
+2019-11-02 16:07:35,258 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-9088-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-02 16:07:35,279 WARN com.cg.otm.OnlineTestManagementRestful.config.JwtRequestFilter [http-nio-9088-exec-1] JWT Token does not begin with Bearer String
+2019-11-02 16:07:57,026 WARN com.cg.otm.OnlineTestManagementRestful.config.JwtRequestFilter [http-nio-9088-exec-2] JWT Token does not begin with Bearer String
+2019-11-02 16:08:33,758 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-4] Entered update user method
+2019-11-02 16:08:33,893 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-4] User successfully updated
+2019-11-02 16:08:33,894 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-4] User Updated By - 192.168.0.130 on date 192.168.0.130

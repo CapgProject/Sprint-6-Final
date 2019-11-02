@@ -1,0 +1,103 @@
+<style type="text/css">
+	.error {
+		color: red;
+	}
+	
+</style>
+
+<header id="header" style="background-color: rgb(22, 7, 7); opacity: 0.6">
+	<div class="container">
+
+	  <div id="logo" class="pull-left" style="width: 100%"></div>
+
+	  <nav id="nav-menu-container">
+		<ul class="nav-menu" style="width: 100%;">
+		  <li class="menu-active"><a href="admin">Home</a></li>
+		  <li class="menu-has-children"><a href="updateadmin">Test</a>
+			<ul>
+			  <li><a href="addtest">Add Test</a></li>
+			  <li><a href="updatetest">Update Test</a></li>
+			  <li><a href="removetest">Remove Test</a></li>
+			  <li><a href="showalltests">Show All Test</a></li>
+			  <li><a href="assign">Assign Test</a></li>
+			</ul>
+		  </li>
+		  <li class="menu-has-children"><a href="updateadmin">Question</a>
+			<ul>
+			  <li><a href="addquestion">Add Question</a></li>
+			  <li><a href="updatequestion">Update Question</a></li>
+			  <li><a href="deletequestion">Remove Question</a></li>
+			  <li><a href="showquestion">List Question</a></li>
+			</ul>
+		  </li>
+		  <li><a href="listusers">List Users</a></li>
+		  <li><a href="updateadmin">Update Profile</a></li>
+		  <li><a class="button" href="logout"><i class="fa fa-sign-in"></i>&nbsp;Logout</a></li>          
+		</ul>      
+	  </nav>
+	</div>
+</header>
+
+
+
+	<main id="main"> <br>
+	<section id="portfolio">
+		<div class="container wow fadeInUp">
+			<div class="section-header">
+				<h3 class="section-title">Update Admin</h3>
+				<p class="section-description">Enter the User details to be
+					Updated here</p>
+			</div>
+			<form id="updateform" action="updateusersubmit" method="post"
+				>
+				<div class="row">
+					<div class="text-center col-md-6 col-lg-6">User Id:</div>
+					<div class="col-md-4 col-lg-4">
+                        <input type="text" name="userId" [(ngModel)] = "user.userId"/>
+                        <span *ngIf = 'user_error.idError' class="error">{{user_error.idError}}</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="text-center col-md-6 col-lg-6">User Name:</div>
+					<div class="col-md-4 col-lg-4">
+						<input id="name" type="text" name="userName" [(ngModel)] = "user.userName" (focusout) = "validatename()" />
+						<span id="username_error_message" *ngIf = "user_error.nameError" class = "error">{{user_error.nameError}}</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="text-center col-md-6 col-lg-6">User Password:</div>
+					<div class="col-md-4 col-lg-4">
+						<input id="password" type="text" name="userPassword"
+                        [(ngModel)] = "user.userPassword" (focusout) = "validatepassword()"/>
+						<span id="password_error_message" class = "error" *ngIf = "user_error.passwordError">{{user_error.passwordError}}</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="text-center col-md-6 col-lg-6"></div>
+					<div class="col-md-4 col-lg-4">
+						<button type="button" class="btn btn-primary" (click) = "updateAdmin()" >Update</button>
+					</div>
+				</div>
+				<br>
+			</form>
+		</div>
+	</section>
+
+	</main>
+
+
+	<!--==========================
+
+    Footer
+  ============================-->
+	<footer id="footer" style="position: fixed; bottom: 0px; width: 100%;">
+		<div class="footer-top">
+			<div class="container"></div>
+		</div>
+	</footer>
+	<!-- #footer -->
+
+	<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+
+
